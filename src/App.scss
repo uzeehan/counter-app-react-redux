@@ -1,15 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+@import 'bourbon';
+
+$base-font-size: 16px;
+$font-stack: 'Source Code Pro', monospace;
+$pink: #da5baf;
+$white: #fff;
 
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: $font-stack;
 }
 
 .page-container {
   text-align: center;
   max-width: 100%;
-  font-family: 'Source Code Pro', monospace;
+
 
   ul {
     display: inline-flex;
@@ -43,10 +50,40 @@ body {
     }
 
     button {
-      font-size: 30px;
+      font-size: $base-font-size + 12;
       width: 40px;
       height: 40px;
     }
+
   }
 
+  button.reset-count-btn {
+    padding: 10px;
+    font-size: $base-font-size + 4;
+    font-family: $font-stack;
+  }
+
+  #{$all-buttons} {
+    background-color: $pink;
+    color: $white;
+    font-weight: normal;
+    border: solid 1px shade($pink, 10%);
+    box-shadow: -4px 4px 0 shade($pink, 20%);
+  }
+
+  #{$all-buttons-focus},
+  #{$all-buttons-hover} {
+    outline: none;
+    border: solid 1px shade($pink, 20%);
+    cursor: pointer;
+  }
+
+  #{$all-buttons-active} {
+    outline: none;
+    position: relative;
+    top: 2px;
+    left: -2px;
+    box-shadow: -2px 2px 0 shade($pink, 30%);
+
+  }
 }
