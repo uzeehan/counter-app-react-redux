@@ -52,7 +52,9 @@ class Counter extends Component {
                         <li><button name="plusBtn" onClick={this.increment}>+</button></li>
                     </ul>
                 </section>
-                <button name="resetCountBtn" className="reset-count-btn" onClick={this.resetCount}>Reset Counter</button>
+                <div className="btn-wrapper">
+                    <button name="resetCountBtn" className="reset-count-btn" onClick={this.resetCount}>Reset Counter</button>
+                </div>
             </div>
         )
     }

@@ -5,6 +5,7 @@ $base-font-size: 16px;
 $font-stack: 'Source Code Pro', monospace;
 $pink: #da5baf;
 $white: #fff;
+$primary-bg-color: #ebeba8;
 
 body {
   margin: 0;
@@ -32,7 +33,7 @@ body {
     list-style-type: none;
     margin: 0 15px;
     padding: 5px;
-    background: #ebeba8;
+    background: $primary-bg-color;
     display: inline-flex;
     align-content: center;
     // width: 40px;
@@ -57,10 +58,21 @@ body {
 
   }
 
-  button.reset-count-btn {
-    padding: 10px;
-    font-size: $base-font-size + 4;
-    font-family: $font-stack;
+  .btn-wrapper {
+    background: $primary-bg-color;
+    width: 185px;
+    height: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    // align-content: center;
+
+    button.reset-count-btn {
+      padding: 10px;
+      font-size: $base-font-size + 4;
+      font-family: $font-stack;
+    }
   }
 
   #{$all-buttons} {
